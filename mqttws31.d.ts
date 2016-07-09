@@ -19,8 +19,8 @@ export declare module Paho {
         }
 
         export class Message {
-            payloadString(): string;
-            payloadBytes(): Array<any>;
+            payloadString: string;
+            payloadBytes: Array<any>;
 
             destinationName(): string;
             destinationName(newDestinationName: string);
