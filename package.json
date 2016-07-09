@@ -1,0 +1,24 @@
+{
+  "name": "ng2-mqtt",
+  "version": "0.0.1",
+  "description": "Port of mqttws31 library for angular2",
+  "main": "./index",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/icanos/ng2-mqtt.git"
+  },
+  "keywords": [
+    "angular2",
+    "mqtt",
+    "mqttws31"
+  ],
+  "author": "westin",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/icanos/ng2-mqtt/issues"
+  },
+  "homepage": "https://github.com/icanos/ng2-mqtt#readme"
+}
