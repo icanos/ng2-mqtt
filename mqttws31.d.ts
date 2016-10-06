@@ -19,6 +19,8 @@ export declare module Paho {
         }
 
         export class Message {
+            constructor(payload: string);
+            
             payloadString: string;
             payloadBytes: Array<any>;
 
