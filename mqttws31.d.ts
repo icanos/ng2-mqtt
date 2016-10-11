@@ -19,6 +19,7 @@ export declare module Paho {
         }
 
         export class Message {
+            constructor();
             constructor(payload: string);
             
             payloadString: string;
@@ -35,6 +36,18 @@ export declare module Paho {
 
             duplicate(): boolean;
             duplicate(newDuplicate: boolean);
+        }
+                   
+        export class WireMessage {
+            encode(): ArrayBuffer;
+            decodeMessage(input: ArrayBuffer, pos: number);
+            writeUint16(input: number, buffer: ArrayBuffer, offset: number);
+            writeString(input: string, utf8Length: number, buffer: ArrayBuffer, offset: number);
+            readUint16(buffer: ArrayBuffer, offset: number);
+            encodeMBI(num: number);
+            UTF8Length(input: string);
+            stringToUTF8(input: string, output: ArrayBuffer, start: number);
+            parseUTF8(input: ArrayBuffer, offset: number, length: number);
         }
     }
 }
