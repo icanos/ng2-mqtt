@@ -40,14 +40,14 @@ export declare module Paho {
                    
         export class WireMessage {
             encode(): ArrayBuffer;
-            decodeMessage(input: ArrayBuffer, pos: number);
-            writeUint16(input: number, buffer: ArrayBuffer, offset: number);
-            writeString(input: string, utf8Length: number, buffer: ArrayBuffer, offset: number);
-            readUint16(buffer: ArrayBuffer, offset: number);
-            encodeMBI(num: number);
-            UTF8Length(input: string);
-            stringToUTF8(input: string, output: ArrayBuffer, start: number);
-            parseUTF8(input: ArrayBuffer, offset: number, length: number);
+            decodeMessage(input: ArrayBuffer, pos: number): Array<any>;
+            writeUint16(input: number, buffer: ArrayBuffer, offset: number): number;
+            writeString(input: string, utf8Length: number, buffer: ArrayBuffer, offset: number): number;
+            readUint16(buffer: ArrayBuffer, offset: number): number;
+            encodeMBI(num: number): Array<any>;
+            UTF8Length(input: string): number;
+            stringToUTF8(input: string, output: ArrayBuffer, start: number): ArrayBuffer;
+            parseUTF8(input: ArrayBuffer, offset: number, length: number): string;
         }
     }
 }
