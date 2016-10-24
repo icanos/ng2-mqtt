@@ -19,23 +19,12 @@ export declare module Paho {
         }
 
         export class Message {
-            constructor();
-            constructor(payload: string);
-            
             payloadString: string;
             payloadBytes: Array<any>;
-
-            destinationName(): string;
-            destinationName(newDestinationName: string);
-
-            qos(): number;
-            qos(newQos: number);
-
-            retained(): boolean;
-            retained(newRetained: boolean);
-
-            duplicate(): boolean;
-            duplicate(newDuplicate: boolean);
+            destinationName : string;
+            qos: number;
+            retained: boolean;
+            duplicate: boolean;
         }
                    
         export class WireMessage {
