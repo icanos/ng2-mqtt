@@ -20,6 +20,7 @@ export declare namespace Paho {
         }
 
         export class Message {
+            constructor(payload: any);
             payloadString: string;
             payloadBytes: Array<any>;
             destinationName: string;
