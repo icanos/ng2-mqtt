@@ -7,7 +7,7 @@ export declare namespace Paho {
             connect(connectOptions: Object): void;
             subscribe(filter: string, subscribeOptions: Object): void;
             unsubscribe(filter: string, unsubscribeOptions: Object): void;
-            send(topic: string, payload: string, qos: number, retained: boolean): void;
+            send(message: Message): void;
             disconnect(): void;
             getTraceLog(): void;
             startTrace(): void;
