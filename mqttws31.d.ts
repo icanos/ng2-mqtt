@@ -14,7 +14,7 @@ export declare namespace Paho {
             stopTrace(): void;
             isConnected(): boolean;
 
-            onConnectionLost(responseObject: Object): void;
+            onConnectionLost(responseObject: ResponseObject): void;
             onMessageDelivered(): void;
             onMessageArrived(message: Message): void;
         }
@@ -28,7 +28,11 @@ export declare namespace Paho {
             retained: boolean;
             duplicate: boolean;
         }
-
+        export class ResponseObject {
+            invocationContext?: any;
+            errorCode: number;
+            errorMessage?: string;
+        }
         export class WireMessage {
             encode(): ArrayBuffer;
             decodeMessage(input: ArrayBuffer, pos: number): Array<any>;
