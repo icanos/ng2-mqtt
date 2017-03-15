@@ -617,7 +617,7 @@ Paho.MQTT = (function (global) {
 				output[pos++] = charCode>>12 & 0x3F | 0x80;
 				output[pos++] = charCode>>6  & 0x3F | 0x80;
 				output[pos++] = charCode     & 0x3F | 0x80;
-			};
+			}
 		} 
 		return output;
 	}
@@ -1234,7 +1234,7 @@ Paho.MQTT = (function (global) {
 						this._schedule_message(pubRelMessage);
 					} else {
 						this._schedule_message(sentMessage);
-					};
+					}
 				}
 
 				// Execute the connectOptions.onSuccess callback if there is one.
@@ -1335,7 +1335,7 @@ Paho.MQTT = (function (global) {
 
 			default:
 				this._disconnected(ERROR.INVALID_MQTT_MESSAGE_TYPE.code , format(ERROR.INVALID_MQTT_MESSAGE_TYPE, [wireMessage.type]));
-			};
+			}
 		} catch (error) {
 			this._disconnected(ERROR.INTERNAL_ERROR.code , format(ERROR.INTERNAL_ERROR, [error.message,error.stack.toString()]));
 			return;
@@ -1390,7 +1390,7 @@ Paho.MQTT = (function (global) {
 
 			default:
 				throw Error("Invaild qos="+wireMmessage.payloadMessage.qos);
-		};
+		}
 	};
 
 	/** @ignore */
@@ -1487,8 +1487,8 @@ Paho.MQTT = (function (global) {
 				if (i === 0) this._traceBuffer.push(arguments[i]);
 				else if (typeof arguments[i] === "undefined" ) this._traceBuffer.push(arguments[i]);
 				else this._traceBuffer.push("  "+JSON.stringify(arguments[i]));
-		   };
-		};
+		   }
+		}
 	};
 	
 	/** @ignore */
@@ -1914,7 +1914,7 @@ Paho.MQTT = (function (global) {
 		 * @throws {InvalidState} if the client is not connected.
 		 */   
 		this.send = function (topic,payload,qos,retained) {   
-			var message ;  
+			var message;  
 			
 			if(arguments.length == 0){
 				throw new Error("Invalid argument."+"length");
@@ -2083,7 +2083,7 @@ Paho.MQTT = (function (global) {
 				return byteStream;
 			} else {
 				return payload;
-			};
+			}
 		};
 
 		var destinationName = undefined;
@@ -2142,3 +2142,4 @@ Paho.MQTT = (function (global) {
 	};
 })(window);
 exports.Paho = Paho;
+//# sourceMappingURL=index.js.map
