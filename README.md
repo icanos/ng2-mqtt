@@ -12,7 +12,7 @@ npm install ng2-mqtt
 
 ### Implement in a component or controller
 ```
-import {Paho} from 'mqttws31';
+import {Paho} from 'ng2-mqtt';
 
 export class MyComponent implements OnInit {
   private _client: Paho.MQTT.Client;
