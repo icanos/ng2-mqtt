@@ -1566,9 +1566,9 @@ Paho.MQTT = (function (global) {
 	 *                            <li>{@link Paho.MQTT.Message} that has arrived.
 	 *                            </ol>    
 	 */
-	var Client = function (host, port, path, clientId) {
+	var Client = function (host, port, path, clientId,uri) {
 	    
-	    var uri;
+	    var uri=uri;
 	    
 		if (typeof host !== "string")
 			throw new Error(format(ERROR.INVALID_TYPE, [typeof host, "host"]));
@@ -1597,7 +1597,7 @@ Paho.MQTT = (function (global) {
 				throw new Error(format(ERROR.INVALID_TYPE, [typeof path, "path"]));
 			
 			var ipv6AddSBracket = (host.indexOf(":") != -1 && host.slice(0,1) != "[" && host.slice(-1) != "]");
-			uri = "ws://"+(ipv6AddSBracket?"["+host+"]":host)+":"+port+path;
+			uri = uri+"://"+(ipv6AddSBracket?"["+host+"]":host)+":"+port+path;
 		}
 
 		var clientIdLength = 0;
