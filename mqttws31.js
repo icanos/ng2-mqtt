@@ -915,7 +915,7 @@ Paho.MQTT = (function (global) {
 		if (!this.connected)
 		   throw new Error(format(ERROR.INVALID_STATE, ["not connected"]));
 		
-		wireMessage = new WireMessage(MESSAGE_TYPE.PUBLISH);
+		var wireMessage = new WireMessage(MESSAGE_TYPE.PUBLISH);
 		wireMessage.payloadMessage = message;
 		
 		if (message.qos > 0)
